@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { facebook, instagram, linkedin, twitter, github } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Twitter, Github } from 'lucide-react';
 
 const FooterSection = () => {
   const currentYear = new Date().getFullYear();
@@ -26,7 +26,7 @@ const FooterSection = () => {
               className="social-icon"
               aria-label="Facebook"
             >
-              <facebook className="h-5 w-5" />
+              <Facebook className="h-5 w-5" />
             </a>
             <a 
               href="https://instagram.com" 
@@ -35,7 +35,7 @@ const FooterSection = () => {
               className="social-icon"
               aria-label="Instagram"
             >
-              <instagram className="h-5 w-5" />
+              <Instagram className="h-5 w-5" />
             </a>
             <a 
               href="https://linkedin.com" 
@@ -44,7 +44,7 @@ const FooterSection = () => {
               className="social-icon"
               aria-label="LinkedIn"
             >
-              <linkedin className="h-5 w-5" />
+              <Linkedin className="h-5 w-5" />
             </a>
             <a 
               href="https://twitter.com" 
@@ -53,7 +53,7 @@ const FooterSection = () => {
               className="social-icon"
               aria-label="Twitter"
             >
-              <twitter className="h-5 w-5" />
+              <Twitter className="h-5 w-5" />
             </a>
             <a 
               href="https://github.com" 
@@ -62,7 +62,7 @@ const FooterSection = () => {
               className="social-icon"
               aria-label="GitHub"
             >
-              <github className="h-5 w-5" />
+              <Github className="h-5 w-5" />
             </a>
           </div>
         </div>

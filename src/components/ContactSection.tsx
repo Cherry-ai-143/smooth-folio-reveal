@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { facebook, instagram, linkedin, twitter, github } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Twitter, Github } from 'lucide-react';
 
 interface FormState {
   name: string;
@@ -58,7 +57,6 @@ const ContactSection = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
-    // Clear error when user types
     if (errors[name as keyof FormErrors]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
@@ -71,7 +69,6 @@ const ContactSection = () => {
     
     setIsSubmitting(true);
     
-    // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
@@ -82,7 +79,6 @@ const ContactSection = () => {
         message: ''
       });
       
-      // Reset status after 3 seconds
       setTimeout(() => {
         setSubmitStatus('idle');
       }, 3000);
@@ -92,27 +88,27 @@ const ContactSection = () => {
   const socialIcons = [
     { 
       name: 'Facebook', 
-      icon: facebook, 
+      icon: Facebook, 
       url: 'https://facebook.com' 
     },
     { 
       name: 'Instagram', 
-      icon: instagram, 
+      icon: Instagram, 
       url: 'https://instagram.com' 
     },
     { 
       name: 'LinkedIn', 
-      icon: linkedin, 
+      icon: Linkedin, 
       url: 'https://linkedin.com' 
     },
     { 
       name: 'Twitter', 
-      icon: twitter, 
+      icon: Twitter, 
       url: 'https://twitter.com' 
     },
     { 
       name: 'Github', 
-      icon: github, 
+      icon: Github, 
       url: 'https://github.com' 
     }
   ];
