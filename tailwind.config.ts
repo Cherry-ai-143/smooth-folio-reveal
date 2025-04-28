@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,12 +85,49 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'fade-in-right': {
+					'0%': { opacity: '0', transform: 'translateX(20px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' }
+				},
+				'fade-in-left': {
+					'0%': { opacity: '0', transform: 'translateX(-20px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' }
+				},
+				'type-writer': {
+					'0%': { width: '0%' },
+					'100%': { width: '100%' }
+				},
+				'blink-caret': {
+					'0%, 100%': { borderColor: 'transparent' },
+					'50%': { borderColor: 'hsl(var(--primary))' }
+				},
+				'progress-bar': {
+					'0%': { width: '0%' },
+					'100%': { width: 'var(--progress-width)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'fade-in-right': 'fade-in-right 0.6s ease-out',
+				'fade-in-left': 'fade-in-left 0.6s ease-out',
+				'type-writer': 'type-writer 3s steps(30, end)',
+				'blink-caret': 'blink-caret 0.75s step-end infinite',
+				'progress-bar': 'progress-bar 1.5s ease-out forwards'
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '100%',
+					},
+				},
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
